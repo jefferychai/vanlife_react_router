@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backgroundImg from "../images/image 55.png";
 
 export default function About() {
   return (
     <div className="about-page-container">
       <img
-        src="images/image 55.png"
+        src={backgroundImg}
         className="about-hero-image"
         alt="background_img"
       />

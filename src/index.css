@@ -19,6 +19,12 @@ body {
   scrollbar-width: none;
 }
 
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   height: 110px;
   display: flex;
@@ -46,10 +52,48 @@ header a:hover {
   text-decoration: underline;
 }
 
+header a.selected {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  margin-bottom: 85px;
+}
+
+footer {
+  height: 75px;
+  color: #aaaaaa;
+  background: #252525;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.loading,
+.error {
+  margin-inline: 30px;
+  margin-block: 50px;
+}
+
 /*** HOME PAGE ***/
 .home-container {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
-    url("/public/images/image\ 54.png") no-repeat center center;
+    url("/src/images/image\ 54.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -87,6 +131,375 @@ header a:hover {
 
 .home-container a:hover {
   transform: translate(1px, 1px);
+}
+
+/*** HOST PAGE ***/
+.host-nav {
+  margin-bottom: 40px;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.host-nav a.selected {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
+.host-van-link-wrapper {
+  text-decoration: unset;
+  color: unset;
+}
+
+.host-vans-title {
+  padding-inline: 26px;
+  font-size: 32px;
+}
+
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.host-van-single img {
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 18px;
+}
+
+.host-van-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.host-van-info p {
+  margin-top: -10px;
+}
+
+/*** HOST VAN DETAIL PAGE ***/
+
+.back-button {
+  margin-inline: 30px;
+  color: #161616;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.back-button-align {
+  margin-left: 0px;
+  text-decoration: underline;
+}
+
+.back-button img {
+  margin-right: 10px;
+  height: 14px;
+}
+
+.host-van-detail-container {
+  background: white;
+  margin-inline: 30px;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.host-van-detail {
+  display: flex;
+  align-items: center;
+}
+
+.host-van-detail img {
+  height: 160px;
+  border-radius: 5px;
+}
+
+.host-van-detail-info {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.host-van-detail-info h1 {
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+.host-van-detail-info p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -15px;
+}
+
+.host-van-detail-nav {
+  display: flex;
+  margin-block: 30px;
+}
+
+.host-van-detail-nav a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4d4d4d;
+  text-decoration: unset;
+  margin-right: 30px;
+}
+
+.host-van-detail-nav a.selected {
+  color: #161616;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.host-van-detail-info-text p {
+  color: #161616;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.host-van-detail-price {
+  font-size: 20px;
+  margin-block: 40px;
+}
+
+.host-van-detail-price span {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.host-van-detail-photo {
+  height: 100px;
+  border-radius: 5px;
+}
+
+/*** HOST VAN DASHBOARD PAGE ***/
+.host-dashboard-earnings {
+  background-color: #ffead0;
+  padding: 37px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.host-dashboard-earnings > .info > h1 {
+  font-size: 36px;
+  color: #161616;
+  margin: 0;
+}
+
+.host-dashboard-earnings > .info > p {
+  color: #4d4d4d;
+}
+
+.host-dashboard-earnings > .info > p > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-dashboard-earnings > .info > h2 {
+  margin: 0;
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+.host-dashboard-reviews {
+  background-color: #ffddb2;
+  padding: 25px 26px;
+  display: flex;
+  align-items: center;
+}
+
+.host-dashboard-reviews > h2 {
+  margin: 0;
+}
+
+.host-dashboard-reviews .star {
+  color: #ff8c38;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.host-dashboard-reviews p {
+  margin-left: 5px;
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-right: auto;
+}
+
+.host-dashboard-reviews p > span {
+  font-weight: bold;
+  color: #161616;
+}
+
+.host-dashboard-vans {
+  padding: 38px 26px;
+}
+
+.host-dashboard-vans > .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.host-dashboard-vans .host-vans-list {
+  padding-inline: 0;
+}
+
+.view-all {
+  text-decoration: none;
+  color: #161616;
+  margin-left: auto;
+}
+
+.view-all:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+/*** HOST VAN INCOME PAGE ***/
+
+.host-income {
+  padding-inline: 26px;
+  color: #161616;
+}
+
+.host-income > p {
+  color: #4d4d4d;
+}
+
+.host-income > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income > h2 {
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+img.graph {
+  width: 100%;
+  max-width: 500px;
+}
+
+.host-income .info-header > p {
+  color: #4d4d4d;
+}
+
+.host-income .info-header > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income .info-header > h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 60px;
+}
+
+.host-income .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 31px;
+  padding: 35px 29px;
+  border-radius: 6px;
+}
+.host-income .transaction > h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.host-income .transaction > p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4d4d4d;
+}
+
+/*** HOST VAN REVIEW PAGE ***/
+
+.host-reviews {
+  padding-inline: 26px;
+  color: #161616;
+}
+
+.host-reviews .top-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.host-reviews .top-text > h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.host-reviews .top-text > p {
+  margin: 0;
+  color: #4d4d4d;
+}
+
+.host-reviews .top-text > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-reviews > img {
+  margin-bottom: 36px;
+}
+
+.host-reviews .review {
+  margin-block: 25px;
+}
+
+.host-reviews .review .info {
+  display: flex;
+}
+
+.host-reviews .review .name {
+  color: #161616;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.host-reviews .review .date {
+  color: #8c8c8c;
+}
+
+.host-reviews hr {
+  background-color: #c7c7c7;
+  height: 1px;
+  border: 0;
+}
+
+.host-reviews .review-star {
+  color: #ff8c38;
+  margin-right: 5px;
 }
 
 /*** ABOUT PAGE ***/
@@ -143,4 +556,228 @@ header a:hover {
 
 .link-button:hover {
   transform: translate(1px, 1px);
+}
+
+/*** VAN PAGE ***/
+.van-list-container {
+  padding-inline: 32px;
+}
+
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > button {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.van-type.clear-filter {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.van-type.clear-filter:hover {
+  color: #161616;
+}
+
+.van-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.van-tile a {
+  color: #161616;
+  text-decoration: none;
+}
+
+.van-tile img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.van-list-container button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.van-type {
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  color: #4d4d4d;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.van-type:hover {
+  color: #ffead0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.selected {
+  color: #ffead0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+  background-color: #e17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+  background-color: #115e59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+  background-color: #161616;
+}
+
+.van-type.clear-filters {
+  margin-left: -20px;
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #4d4d4d;
+}
+
+i[class*="van-type-"] {
+  padding: 7px 14px;
+}
+
+/*** VAN DETAIL PAGE ***/
+.van-detail-container {
+  padding: 32px;
+}
+
+.van-detail-container .back-button {
+  color: black;
+}
+
+.van-detail-container .back-button span {
+  text-decoration: underline;
+}
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+}
+
+.van-detail img {
+  border-radius: 10px;
+  margin-block: 47px;
+}
+
+.van-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.van-detail > i {
+  align-self: flex-start;
+}
+
+.van-detail .van-price {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.van-detail .van-price span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.van-detail .link-button {
+  background-color: #ff8c38;
+  color: white;
+  font-size: 1.125rem;
+  margin-top: 10px;
+}
+
+/*** NOT FOUND PAGE ***/
+.not-found-container {
+  margin-inline: 30px;
+}
+
+.not-found-container > a {
+  width: 100%;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+/*** LOGIN PAGE ***/
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-block: 20px;
+}
+
+.login-form > input {
+  border: 1px solid rgba(209, 213, 219);
+  height: 40px;
+  text-indent: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.login-form > input:focus {
+  outline: none;
+}
+
+.login-form > input:first-of-type {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+
+.login-form > button {
+  background-color: #ff8c38;
+  border: none;
+  border-radius: 6px;
+  height: 55px;
+  margin-top: 22px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login-form > button:active {
+  transform: translate(2px, 2px);
+}
+
+.red {
+  color: #cc0000;
 }
