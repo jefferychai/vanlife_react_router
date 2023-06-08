@@ -7,10 +7,10 @@ import {
   Await,
 } from "react-router-dom";
 import arrowIcon from "../../images/Arrow 1.png";
-import { getVans } from "../../api";
+import { getVan } from "../../api";
 
 export function loader({ params }) {
-  return defer({ van: getVans(params.id) });
+  return defer({ van: getVan(params.id) });
 }
 
 export default function VanDetail() {

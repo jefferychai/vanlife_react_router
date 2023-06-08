@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout, { loader as layoutLoader } from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans, { loader as vansLoader } from "./pages/Vans/Vans";
@@ -30,13 +30,14 @@ import Login, {
   loader as loginLoader,
   action as loginAction,
 } from "./pages/Login";
+import Signup, { action as signupAction } from "./pages/Signup";
 import "./index.css";
 import "./server";
 import { requireAuth } from "./utils";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/vanlife_react_router" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
         loader={loginLoader}
         action={loginAction}
       />
+      <Route path="signup" element={<Signup />} action={signupAction} />
       <Route
         path="vans"
         element={<Vans />}

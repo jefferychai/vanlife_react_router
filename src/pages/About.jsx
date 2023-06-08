@@ -30,7 +30,7 @@ export default function About() {
           <br />
           Your van is ready.
         </h2>
-        <Link className="link-button" to="/vans">
+        <Link className="link-button" to="/vanlife_react_router/vans">
           Explore our vans
         </Link>
       </div>

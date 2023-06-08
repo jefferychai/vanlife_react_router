@@ -5,6 +5,7 @@ import {
   redirect,
   useActionData,
   useNavigation,
+  Link,
 } from "react-router-dom";
 import { loginUser } from "../api";
 
@@ -17,10 +18,11 @@ export async function action({ request }) {
   const email = formData.get("email");
   const password = formData.get("password");
   const pathname =
-    new URL(request.url).searchParams.get("redirectTo") || "/host";
+    new URL(request.url).searchParams.get("redirectTo") ||
+    "/vanlife_react_router/host";
   try {
     const data = await loginUser({ email, password });
-    localStorage.setItem("loggedin", true);
+    localStorage.setItem("loggedIn", true);
     return redirect(pathname);
   } catch (err) {
     return err.message;
@@ -45,6 +47,11 @@ export default function Login() {
           {navigation.state === "submitting" ? "Logging in..." : "Log in"}
         </button>
       </Form>
+
+      <p className="signup">
+        Dont have an account?{" "}
+        <Link to="/vanlife_react_router/signup">Create one now</Link>
+      </p>
     </div>
   );
 }

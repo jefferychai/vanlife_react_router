@@ -1,15 +1,19 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Form, Link, NavLink, useNavigate } from "react-router-dom";
 import loginIcon from "../images/login-icon.png";
 
 export default function Header() {
-  function fakeLogout() {
-    localStorage.removeItem("loggedin");
+  const isLoggedIn = localStorage.getItem("loggedIn");
+  const navigate = useNavigate();
+
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    return navigate("/vanlife_react_router/login");
   }
 
   return (
     <header>
-      <Link className="site-logo" to="/">
+      <Link className="site-logo" to="/vanlife_react_router">
         #VANLIFE
       </Link>
       <nav>
@@ -31,11 +35,17 @@ export default function Header() {
         >
           Vans
         </NavLink>
-        <NavLink to="login">
-          <img src={loginIcon} alt="login_icon_img" />
-        </NavLink>
-
-        <button onClick={fakeLogout}>X</button>
+        {isLoggedIn ? (
+          <Form method="post">
+            <button type="submit" onClick={logout} className="logout-btn">
+              Logout
+            </button>
+          </Form>
+        ) : (
+          <NavLink to="login">
+            <img src={loginIcon} alt="login_icon_img" />
+          </NavLink>
+        )}
       </nav>
     </header>
   );

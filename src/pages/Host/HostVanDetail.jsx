@@ -8,12 +8,12 @@ import {
   Await,
 } from "react-router-dom";
 import arrowIcon from "../../images/Arrow 1.png";
-import { getHostVans } from "../../api";
+import { getVan } from "../../api";
 import { requireAuth } from "../../utils";
 
 export async function loader({ params, request }) {
   await requireAuth(request);
-  return defer({ currentVan: getHostVans(params.id) });
+  return defer({ currentVan: getVan(params.id) });
 }
 
 export default function HostVanDetail() {
@@ -63,7 +63,7 @@ export default function HostVanDetail() {
 
   return (
     <section>
-      <Link to="/host/vans" className="back-button">
+      <Link to="/vanlife_react_router/host/vans" className="back-button">
         <img src={arrowIcon} alt="arrow_icon" />
         Back to all vans
       </Link>
