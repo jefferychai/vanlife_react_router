@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/vanlife_react_router/static/css/main.b39bf5cb.css",
-    "main.js": "/vanlife_react_router/static/js/main.7dee2005.js",
+    "main.js": "/vanlife_react_router/static/js/main.1b047b81.js",
     "static/media/image 54.png": "/vanlife_react_router/static/media/image 54.0cb5badd03d39643fb30.png",
     "static/media/image 55.png": "/vanlife_react_router/static/media/image 55.e38acdcd233d216e3888.png",
     "static/media/Group 312.png": "/vanlife_react_router/static/media/Group 312.00ea73a5762f95137175.png",
     "static/media/Group 314.png": "/vanlife_react_router/static/media/Group 314.d8599bd59e478168819c.png",
     "index.html": "/vanlife_react_router/index.html",
     "main.b39bf5cb.css.map": "/vanlife_react_router/static/css/main.b39bf5cb.css.map",
-    "main.7dee2005.js.map": "/vanlife_react_router/static/js/main.7dee2005.js.map"
+    "main.1b047b81.js.map": "/vanlife_react_router/static/js/main.1b047b81.js.map"
   },
   "entrypoints": [
     "static/css/main.b39bf5cb.css",
-    "static/js/main.7dee2005.js"
+    "static/js/main.1b047b81.js"
   ]
 }
