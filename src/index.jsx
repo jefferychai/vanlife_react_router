@@ -6,30 +6,23 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import Layout, { loader as layoutLoader } from "./components/Layout";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans, { loader as vansLoader } from "./pages/Vans/Vans";
 import VanDetail, { loader as vanDetailLoader } from "./pages/Vans/VanDetail";
 import HostLayout from "./components/HostLayout";
-import HostDashboard, {
-  loader as HostDashboardLoader,
-} from "./pages/Host/HostDashboard";
+import HostDashboard, { loader as HostDashboardLoader } from "./pages/Host/HostDashboard";
 import HostIncome from "./pages/Host/HostIncome";
 import HostVans, { loader as hostVansLoader } from "./pages/Host/HostVans";
-import HostVanDetail, {
-  loader as hostVanDetailLoader,
-} from "./pages/Host/HostVanDetail";
+import HostVanDetail, { loader as hostVanDetailLoader } from "./pages/Host/HostVanDetail";
 import HostReviews from "./pages/Host/HostReviews";
 import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NotFound from "./pages/NotFound";
 import Error from "./components/Error";
-import Login, {
-  loader as loginLoader,
-  action as loginAction,
-} from "./pages/Login";
+import Login, { loader as loginLoader, action as loginAction } from "./pages/Login";
 import Signup, { action as signupAction } from "./pages/Signup";
 import "./index.css";
 import "./server";
@@ -40,19 +33,9 @@ const router = createBrowserRouter(
     <Route path="/vanlife_react_router" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route
-        path="login"
-        element={<Login />}
-        loader={loginLoader}
-        action={loginAction}
-      />
+      <Route path="login" element={<Login />} loader={loginLoader} action={loginAction} />
       <Route path="signup" element={<Signup />} action={signupAction} />
-      <Route
-        path="vans"
-        element={<Vans />}
-        errorElement={<Error />}
-        loader={vansLoader}
-      />
+      <Route path="vans" element={<Vans />} errorElement={<Error />} loader={vansLoader} />
       <Route
         path="vans/:id"
         element={<VanDetail />}
@@ -103,7 +86,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
-  )
+  ),
+  { basename: "/" }
 );
 
 function App() {
